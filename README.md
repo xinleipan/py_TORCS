@@ -1,22 +1,28 @@
-# Installation
+<figure class="half">
+    <img src="./images/demo.gif" width="70%">
+</figure>
 
+### Installation
 Note that in order to install torcs on your computer system, you may need to 
-install CUDA driver without installing opengl libs. The gym-TORCS environment
+install CUDA driver without opengl libs. The gym-TORCS environment
 has only been tested on Ubuntu 16.04 environment, and currently it does not
 support windows or macOSX environment. 
 
-To install, follow the instructions
+```bash
+git clone https://github.com/xinleipan/py-TORCS.git
+cd py-TORCS/
+sudo sh install.sh
+python -m pip install -e . || python setup.py install
+```
 
-    git clone git@github.com:xinleipan/gym-TORCS.git
-    cd torcs-1.3.6
-    make clean
-    ./configure --disable-xrandr
-    cd ..
-    ./install_deps.sh
-    cd torcs-1.3.6
-    make
-    sudo make install
-    sudo make datainstall
-    cd ..
-    cd py_TORCS
-    python setup.py install    
+### Usage
+```python
+import gym
+import py_TORCS
+
+env = gym.make('TORCS-v0')
+obs, info = env.reset()
+obs, reward, terminal, info = env.step(np.array([1.0, 0.0]))
+```
+
+Have fun!
