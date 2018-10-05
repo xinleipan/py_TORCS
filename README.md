@@ -10,7 +10,7 @@ support windows or macOSX environment.
 
 ```bash
 git clone https://github.com/xinleipan/py-TORCS.git
-cd py-TORCS/
+cd py_TORCS/
 sudo sh install.sh
 python -m pip install -e . || python setup.py install
 ```
