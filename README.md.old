@@ -1,11 +1,5 @@
 # TORCS for Reinforcement Learning
 
-```
-git clone https://github.com/cxy1997/pyTORCS.git
-cd pyTORCS/
-./install_all.sh
-```
-
 ## Demo
 ```
 python example.py
